@@ -3,8 +3,15 @@
 
 * {
   font-family: 'Open Sans';
-  letter-spacing: 0.05em;
 }
+
+.container {
+    
+  @media (min-width: 1260px) {
+    max-width: 1190px;
+  }
+}
+
 .header {
   
   .container {
@@ -76,6 +83,15 @@
 
   &__mess-icon {
     margin-top: 6px;
+    display: flex;
+
+    a {
+      transition: transform .2s ease;
+
+      &:hover {
+        transform: translateY(-7%);
+      }
+    }
   }
 
   &__select {
@@ -87,6 +103,7 @@
 
     .select-enter {
       position: relative;
+      margin-left: -10px;
     }
     .select-enter:before {
       content: "";
@@ -166,6 +183,11 @@
       font-size: 13.8742px;
       line-height: 19px;
       color: black;
+      transition: color .1s ease;
+
+      &:hover {
+        color: #FCB346;
+      }
     }
     .point {
       margin: 0 16px;
@@ -175,5 +197,101 @@
       border-radius: 50%;
     }
   }
+}
+
+.lease {
+  padding-top: 105px;
+  padding-bottom: 100px;
+  background: url("../img/car-pc.png") 89% 50% / 45% no-repeat;
+
+  .container {
+  }
+  .row {
+  }
+  .col-6 {
+  }
+
+  &__h1 {
+    font-size: 60px;
+    line-height: 72px;
+    position: relative;
+    z-index: 100;
+
+    span {
+      color: #FDD067;
+      font-weight: 700;
+    }
+  }
+
+  &__park {
+    position: relative;
+    margin-top: 60px;
+    padding: 32px 64px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__lights {
+    position: absolute;
+    right: 17px;
+    bottom: -50%;
+  }
+
+  &__park-show {
+    margin-right: 50px;
+    position: relative;
+    z-index: 100;    
+
+    a {
+      display: block;
+      color: white;
+      background: linear-gradient(105.39deg, #FCB346 13.06%, #FFC85F 111.82%);
+      border-radius: 91.573px;
+      padding: 10px 38px;
+      font-weight: 600;
+      font-size: 16.4831px;
+      line-height: 22px;
+      letter-spacing: 0.05em;
+      transition: box-shadow .2s ease,transform .2s ease;
+
+      &:hover {
+        box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+      }
+      &:active {
+        transform: translateY(7%);
+      }
+    }
+  }
+
+  &__park-price {}
+
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 100;
+
+    .lease__vk, .lease__tg, .lease__wa {
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: translateY(-7%);
+      }
+    }
+  }
+
+  &__vk {}
+
+  &__tg {}
+
+  &__wa {}
 }
 
