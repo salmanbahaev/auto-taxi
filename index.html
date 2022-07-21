@@ -14,7 +14,6 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-
           <div class="header__wrapper">
             <div class="header__logo">
               <img src="img/logo.svg" alt="logo">
@@ -25,7 +24,7 @@
             </div>
         
             <div class="header__mess">
-              <div class="header__mess-text">Пишите, мы онлайн</div>
+              <p class="header__mess-text">Пишите, мы онлайн</p>
               <div class="header__mess-icon">
                 <img src="img/vk.svg" alt="vk">
                 <img src="img/telegram.svg" alt="telegram">
@@ -35,14 +34,14 @@
         
             <div class="header__select">
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#city">
+              <button type="button" class="btn btn-primary select-enter" data-toggle="modal" data-target="#city">
                 Выберите город
               </button>
               <p class="header__city">Ярославль</p>
   
               <!-- Модальное окно -->
               <div class="modal fade" id="city" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="cityLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="cityLabel">Заголовок модального окна</h5>
@@ -71,17 +70,48 @@
               </p>
             </div>
           </div>
-
         </div>
 
-        <div class="col-12">
-          <nav>
-      
+        <div class="col-12 col-xl-10 nav-wrapper">
+          <nav class="nav">
+            <a href="#">Наш парк</a><div class="point"></div>
+            <a href="#">Условия аренды</a><div class="point"></div>
+            <a href="#">Мой доход</a><div class="point"></div>
+            <a href="#">Авто бесплатно</a><div class="point"></div>
+            <a href="#">Отзывы</a><div class="point"></div>
+            <a href="#">Контакты</a>
           </nav>
         </div>
       </div>
     </div>
   </header>
+  <section class="lease">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-6">
+          <h1 class="lease__h1">Аренда авто <br>
+            для работы в такси <br>
+            в Ярославле
+          </h1>
+          <div class="lease__park">
+            <a href="#">Смотреть парк</a>
+            <div>
+              <p class="lease__text">Подскажем свободные автомобили и цены</p>
+              <div class="lease__link">
+                <a href="#" class="lease__vk"><img src="img/lease-vk.svg" alt="vkontakte"></a>
+                <a href="#" class="lease__tg"><img src="img/lease-tg.svg" alt="telegram"></a>
+                <a href="#" class="lease__wa"><img src="img/lease-wa.svg" alt="whatsapp"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-6"></div>
+
+      </div>
+    </div>
+  </section>
 
 
 
