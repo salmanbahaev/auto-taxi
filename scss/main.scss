@@ -15,7 +15,7 @@
 .title-text {
   font-weight: 600;
   font-size: 40px;
-  line-height: 72px;
+  line-height: 65px;
   text-align: center;
 
   @media (max-width: 991.98px) {
@@ -733,3 +733,152 @@
     }
   }
 }
+
+.get {
+  padding-top: 100px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+
+    @media (max-width: 991.98px) {
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding-bottom: 50px;
+    }
+
+    & > p {
+      margin-right: 10px;
+    }
+  }
+
+  &__disc {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__disc-abs {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    transform: rotate(-2deg);
+    border: 2px solid rgba(255, 200, 95, 1);
+  }
+
+  &__card-wrapper {
+    padding: 0 22px;
+    min-height: 100%;
+    margin: 0 auto;
+    margin-top: 45px;
+
+    
+
+    @media (max-width: 767.98px) {
+      padding: 0 12px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 0 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 25px 30px 35px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 200, 95, 1);
+
+    @media (max-width: 767.98px) {
+      padding: 30px 20px 30px 25px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 30px;
+      max-width: 310px;
+      margin: 0 auto;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 200, 95, 1);;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    
+    p {
+      font-size: 23.4223px;
+      line-height: 32px;
+    }
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 17.5667px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  
+
+  &__card-text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 21px;
+  }
+
+  &__card-time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__card-time-text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__card-links {
+    display: flex;
+    align-items: center;
+
+    a {
+      width: 53px;
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: translateY(-7%);
+      }
+
+      @media (max-width: 767.98px) {
+        width: 45px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
