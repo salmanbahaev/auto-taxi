@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Авто-такси</title>
 </head>
@@ -25,7 +26,7 @@
         
             <div class="header__mess">
               <p class="header__mess-text">Пишите, мы онлайн</p>
-              <div class="header__mess-icon">
+              <div class="header__mess-icon small-icons">
                 <a href="#"><img src="img/vk.svg" alt="vk"></a>
                 <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
                 <a href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a>
@@ -528,11 +529,359 @@
     </div>
   </section>
 
-  <footer></footer>
+  <section class="need">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-1"></div>
+        <div class="col">
+          <div class="need__wrapper">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="need__h3">Для старта нужно</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="need__card">
+                  <div class="need__card-img img-1"></div>
+                  <div class="need__title">
+                    <p>Аренда <br> от 21 года</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="need__card">
+                  <div class="need__card-img img-2"></div>
+                  <div class="need__title">
+                    <p>Прописка Ярославская или Ивановская область</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="need__card">
+                  <div class="need__card-img img-3"></div>
+                  <div class="need__title">
+                    <p>Стаж вождения <br> от 3 лет</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-lg-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="how">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-lg-8 how__title">
+          <h2>Узнайте, сколько зарабатывают наши водители работая в такси</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-lg-1"></div>
+        <div class="col">
+          <div class="how__wrapper">
+
+            <div class="how__calc">
+              <div class="how__calc-block">
+                <p class="calc__hours">Часов в день </p>
+                <div id="slidermoney">
+                  <div id="moneycount_label">1</div><input type="hidden" id="moneycount" name="moneycount" />
+                </div>
+                <p class="calc__days">Дней в неделю </p>
+                <input type="hidden" id="daycount" name="daycount" /><br />
+                <div id="slidertime">
+                  <div id="daycount_label">1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="how__summ">
+              <p class="how__summ-title">Ваш заработок </p>
+              <div class="how__summ-block">
+                <p class="how__summ-value">1820</p>
+                <p class="how__summ-rub">рублей в месяц</p>
+              </div>
+              <p class="how__summ-text">
+                *Доход спрогнозирован на основании среднего дохода наших водителей за последние 6 месяцев.
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="offset-lg-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="rent">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="rent__wrapper">
+            <p class="rent__text">
+              Арендовать автомобиль
+              и начать зарабатывать:
+            </p>
+            <a class="tel-btn" href="tel:+74852205116">+7 4852 20 51 16</a>
+            <div class="rent__links">
+              <a href="#"><img src="img/telegram.svg" alt=""></a>
+              <a href="#"><img src="img/whatsapp.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="free">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="free__title title-text">Получите автомобиль <span>бесплатно</span> <br>
+            на любой срок от 14 дней, работая в нашем парке</h2>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-6">
+          <div class="free__list">
+            <div class="free__list-item">
+              <div class="free__list-img">
+                <img src="img/check.svg" alt="check">
+              </div>
+              <p class="free__list-text">Автомобиль выдаётся бесплатно</p>
+            </div>
+            <div class="free__list-item">
+              <div class="free__list-img">
+                <img src="img/check.svg" alt="check">
+              </div>
+              <p class="free__list-text">Без залога</p>
+            </div>
+            <div class="free__list-item">
+              <div class="free__list-img">
+                <img src="img/check.svg" alt="check">
+              </div>
+              <p class="free__list-text">50% дохода водителю</p>
+            </div>
+            <div class="free__list-item">
+              <div class="free__list-img">
+                <img src="img/check.svg" alt="check">
+              </div>
+              <p class="free__list-text">Заправка за наш счёт </p>
+            </div>
+            <div class="free__list-item">
+              <div class="free__list-img">
+                <img src="img/check.svg" alt="check">
+              </div>
+              <p class="free__list-text">Покупка смены и все комиссии <br>агрегатора за наш счёт</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="free__img-p">
+            <div class="free__img-wrapper">
+              <img src="img/free.jpg" alt="photo">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 work__pad">
+          <div class="work__wrapper">
+
+            <div class="work__img">
+              <img src="img/car-work.png" alt="car">
+            </div>
+
+            <div class="work__info">
+              <h2>Получите автомобиль <br>
+                и начните работу уже сегодня
+              </h2>
+              <p class="work__info-text">Подскажем, свободные авто и цены</p>
+              <div class="work__info-cont">
+                <a class="tel-btn" href="tel:+74852205116">+7 4852 20 51 16</a>
+                <div class="work__links links">
+                  <a href="#"><img src="img/telegram.svg" alt=""></a>
+                  <a href="#"><img src="img/whatsapp.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="rev__title title-text">
+            Отзывы водителей, <br> 
+            которые уже с нами
+          </h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="slider__wrapper">
+            <div class="slider">
+  
+              <div class="slider__item">
+                <p class="slider__price">35 000 рублей в месяц</p>
+                <div class="slider__name">
+                  <img src="img/rev-1.png" alt="">
+                  <p class="slider__address">Николай, г.Иваново</p>
+                </div>
+                <p class="slider__model">Kia Rio</p>
+                <div class="slider__text">Автомобили чистые, без запаха, не стыдно
+                  посадить клиентов. С расходом всё в
+                  порядке, как было заявлено в документах.</div>
+              </div>
+
+              <div class="slider__item">
+                <p class="slider__price">30 000 рублей в месяц</p>
+                <div class="slider__name">
+                  <img src="img/rev-2.png" alt="">
+                  <p class="slider__address">Максим, г.Ярославль</p>
+                </div>
+                <p class="slider__model">Hyundai Solaris 2014</p>
+                <div class="slider__text">Арендую авто уже более года, все вопросы
+                  быстро решают. Большое спасибо, 
+                  за возможность работы.</div>
+              </div>
+
+              <div class="slider__item">
+                <p class="slider__price">35 000 рублей в месяц</p>
+                <div class="slider__name">
+                  <img src="img/rev-1.png" alt="">
+                  <p class="slider__address">Николай, г.Иваново</p>
+                </div>
+                <p class="slider__model">Kia Rio</p>
+                <div class="slider__text">Автомобили чистые, без запаха, не стыдно
+                  посадить клиентов. С расходом всё в
+                  порядке, как было заявлено в документах.</div>
+              </div>
+
+              <div class="slider__item">
+                <p class="slider__price">30 000 рублей в месяц</p>
+                <div class="slider__name">
+                  <img src="img/rev-2.png" alt="">
+                  <p class="slider__address">Максим, г.Ярославль</p>
+                </div>
+                <p class="slider__model">Hyundai Solaris 2014</p>
+                <div class="slider__text">Арендую авто уже более года, все вопросы
+                  быстро решают. Большое спасибо, 
+                  за возможность работы.</div>
+              </div>
+
+              <div class="slider__item">
+                <p class="slider__price">35 000 рублей в месяц</p>
+                <div class="slider__name">
+                  <img src="img/rev-1.png" alt="">
+                  <p class="slider__address">Николай, г.Иваново</p>
+                </div>
+                <p class="slider__model">Kia Rio</p>
+                <div class="slider__text">Автомобили чистые, без запаха, не стыдно
+                  посадить клиентов. С расходом всё в
+                  порядке, как было заявлено в документах.</div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="map-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="title-text">Получить автомобиль вы можете <br>
+            по адресу
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa02e85f52dedc86d4831a625436b57da45ca5b315a597fa0f9218b8e3cec8adf&amp;width=100%25&amp;height=572&amp;lang=ru_RU&amp;scroll=true"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="map__address">
+            <div class="map__city">
+              <img src="img/point.svg" alt="point">
+              <p>г.Ярославль, пр-т Ленина 8а,
+                офис 22</p>
+            </div>
+            <div class="map__time">
+              <img src="img/time.svg" alt="time">
+              <p>Мы работаем Пн-Пт с 9:00-
+                19:00</p>
+            </div>
+            <div class="map__contacts">
+              <div class="map__contacts-phone">
+                <img src="img/phone.svg" alt="phone">
+                <a href="tel:+74852205116">+7 (4852) 20-51-16</a>
+              </div>
+              <div class="map__contacts-links small-icons">
+                <a href="#"><img src="img/vk.svg" alt="vk"></a>
+                <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                <a href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer__wrapper">
+            <div class="footer__logo">
+              <a href="/"><img src="img/logo.svg" alt="logo"></a>
+              <p>Аренда авто для <br>
+                работы в такси <br>
+                в Ярославле и Иваново
+              </p>
+            </div>
+  
+            <p class="footer__politic">Политика конфенденциальности</p>
+  
+            <p class="footer__studio">Сайт разработан: студия Максима Ларина</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" integrity="sha512-cViKBZswH231Ui53apFnPzem4pvG8mlCDrSyZskDE9OK2gyUd/L08e1AC0wjJodXYZ1wmXEuNimN1d3MWG7jaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
