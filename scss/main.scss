@@ -12,6 +12,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title-text {
   font-weight: 600;
   font-size: 40px;
@@ -89,6 +93,7 @@
   
   @media (max-width: 767.98px) {
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 6000;
     background: #fff;
@@ -271,7 +276,7 @@
         color: #FCB346;
       }
     }
-    .point {
+    .point { 
       margin: 0 16px;
       width: 3.2px;
       height: 3.2px;
