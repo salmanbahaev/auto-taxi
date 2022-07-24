@@ -73,6 +73,40 @@ $( document ).ready(function() {
     dots: true,
   });
 
+  // slick - help
+  $('.help__slider').slick({
+    slidesToShow: 1,
+    dots: true,
+    adaptiveHeight: true,
+  });
+  
+  // slick - start
+  $('.start__slider-1').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-2').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-3').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-4').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-5').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-6').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-7').slick({
+    slidesToShow: 1,
+  });
+  $('.start__slider-8').slick({
+    slidesToShow: 1,
+  });
+
+  // ============= SLIDERS
   window.scrollBy(0, 1);
 
   $('.menu__btn').click(function(event) {
@@ -82,4 +116,23 @@ $( document ).ready(function() {
   $('.menu__item').click(function() {
     $('#menu__toggle').removeAttr("checked");
   })
+
+  // slider start
+  var list = $(".wrapper-boxes .box");
+  var numToShow = 3; //сколько показывать элементов
+  var button = $(".box-button button");
+  var numInList = list.length;
+  list.hide();
+  if (numInList > numToShow) {
+    button.show();
+  }
+  list.slice(0, numToShow).show();
+  button.click(function() {
+    var showing = list.filter(':visible').length;
+    list.slice(showing - 1, showing + numToShow).fadeIn();
+    var nowShowing = list.filter(':visible').length;
+    if (nowShowing >= numInList) {
+      button.hide();
+    }
+  });
 });
