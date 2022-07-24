@@ -90,6 +90,56 @@ html {
 // ======================
 
 .header {
+  .modal-dialog {
+    @media (min-width: 576px){
+      max-width: 400px;
+      margin: 1.75rem auto;
+    }
+  }
+  .modal-content {
+    border-radius: 30px;
+
+    .modal-header {
+      font-size: 20px;
+      padding-left: 25px;
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        position: relative;
+        padding: 10px;
+        font-size: 18px;
+        color: #000;
+        margin-left: 20px;
+        transition-duration: .25s;
+
+        &:hover {
+          cursor: pointer;
+          color: $yell;
+          margin-left: 26px;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: -5px;
+          display: block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: #000;
+        }
+      }
+    }
+    
+    .btn {
+      border-radius: 15px;
+    }
+  }
   
   @media (max-width: 767.98px) {
     position: fixed;
@@ -293,6 +343,12 @@ html {
   }
 
   //===== burger-menu
+  body.lock {
+    @media (max-width: 767.98px) {
+      overflow: hidden;
+    }
+  }
+
   .hamburger-menu {
     display: none;
     position: relative;
@@ -364,7 +420,7 @@ html {
     visibility: hidden;
     top: 0;
     left: -100%;
-  
+    overflow: auto;
     width: 100%;
     height: 100%;
   
@@ -383,16 +439,16 @@ html {
   .menu__item {
     display: block;
     padding: 12px 24px;
-  
     color: #333;
-  
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 19px;
-  
     text-decoration: none;
-  
     transition-duration: .25s;
+    border-radius: 10px;
+    &:hover {
+      margin-left: 10px;
+    }
   }
   .menu__item:hover {
     background-color: #CFD8DC;
@@ -699,6 +755,34 @@ html {
     background: #FAFAFA;
     border-radius: 35px;
     margin-top: 27px;
+  }
+
+  .sale {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "SALE";
+      display: block;
+      left: 50px;
+      top: 20px;
+      padding: 4.1px 8.5px;
+      font-weight: 700;
+      font-size: 10.7852px;
+      line-height: 13px;
+      color: #FAFAFA;
+      background: linear-gradient(145.66deg, #2684EF -8.11%, #50A1FF 125.17%);
+      border-radius: 18.6667px;
+      z-index: 5;
+    }
+  }
+
+  .courier {
+    position: relative;
+
+    &::before {
+      content: "Для курьеров";
+    }
   }
 
   &__card-img {
@@ -1213,8 +1297,22 @@ html {
     line-height: 54px;
     margin-bottom: 100px;
 
-    span {
+    .yell {
       color: $yell;
+    }
+    .underline {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 5px;
+        left: 5px;
+        width: 95%;
+        border-bottom: 2px solid #FCB346;
+        z-index: -1;
+      }
     }
   }
 
@@ -1475,9 +1573,15 @@ html {
   }
 
   &__address {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: auto;
+    display: table;
+    right: calc(50% + 123px);
     padding: 35px;
     width: 398px;
-    margin-left: 60px;
     background: #fff;
     border-radius: 35px;
   }
@@ -1524,6 +1628,7 @@ html {
 }
 
 .footer {
+  background: #FAFAFA;
 
   &__wrapper {
     display: flex;

@@ -61,10 +61,25 @@ $( document ).ready(function() {
       else $(this).val('');
   });
 
+  // $(function(){
+  //   $('').load(function(){
+      
+  //   }); 
+  // })
 
+  // slick slider
   $('.slider').slick({
     slidesToShow: 2,
     dots: true,
   });
 
+  window.scrollBy(0, 1);
+
+  $('.menu__btn').click(function(event) {
+    $('body').toggleClass('lock');
+  })
+
+  $('.menu__item').click(function() {
+    $('#menu__toggle').removeAttr("checked");
+  })
 });
