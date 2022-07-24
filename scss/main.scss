@@ -1988,6 +1988,10 @@ html {
 .rev {
   padding-top: 100px;
 
+  @media (max-width: 575.98px) {
+    padding-top: 46px;
+  }
+
   h2 {
     margin-bottom: 80px;
 
@@ -2371,8 +2375,6 @@ html {
         }
       }
     }
-
-    
   }
   &__politic,
   &__studio {
@@ -2391,4 +2393,3 @@ html {
     opacity: 0.5;
   }
 }
-

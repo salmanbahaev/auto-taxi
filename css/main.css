@@ -2013,6 +2013,11 @@ html {
 .rev {
   padding-top: 100px;
 }
+@media (max-width: 575.98px) {
+  .rev {
+    padding-top: 46px;
+  }
+}
 .rev h2 {
   margin-bottom: 80px;
 }
