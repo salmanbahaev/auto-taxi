@@ -478,7 +478,7 @@ html {
   left: -100%;
   overflow: auto;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 100px 0;
   list-style: none;
@@ -1028,6 +1028,7 @@ html {
 .start .start__mobile .start__slider-7 .slick-track,
 .start .start__mobile .start__slider-8 .slick-track {
   display: flex;
+  justify-content: center;
 }
 .start .start__mobile .start__slider-1 .slick-list,
 .start .start__mobile .start__slider-2 .slick-list,
@@ -1165,6 +1166,11 @@ html {
 @media (max-width: 991.98px) {
   .get__title {
     padding-bottom: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .get__title {
+    line-height: 45px;
   }
 }
 @media (max-width: 575.98px) {

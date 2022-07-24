@@ -425,7 +425,7 @@ html {
     left: -100%;
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   
     margin: 0;
     padding: 100px 0;
@@ -1000,6 +1000,7 @@ html {
 
       .slick-track {
         display: flex;
+        justify-content: center;
       }
       .slick-list {
         overflow: hidden;
@@ -1128,6 +1129,10 @@ html {
 
     @media (max-width: 991.98px) {
       padding-bottom: 30px;
+    }
+
+    @media (max-width: 767.98px) {
+      line-height: 45px;
     }
 
     @media (max-width: 575.98px) {

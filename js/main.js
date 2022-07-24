@@ -101,10 +101,26 @@ $( document ).ready(function() {
   });
   $('.start__slider-7').slick({
     slidesToShow: 1,
+    
   });
   $('.start__slider-8').slick({
     slidesToShow: 1,
   });
+  $('.box-button button').click(function(){
+    $('.start__slider-4').slick("refresh");
+    $('.start__slider-5').slick("refresh");
+    $('.start__slider-6').slick("refresh");
+    $('.start__slider-7').slick("refresh");
+    $('.start__slider-8').slick("refresh");
+    $('.start__slider-4').slick("refresh");
+    $('.start__slider-5').slick("refresh");
+    $('.start__slider-6').slick("refresh");
+    $('.start__slider-7').slick("refresh");
+    $('.start__slider-8').slick("refresh");
+  })
+
+  // $('.box-button button').click(function(e){
+  // })
 
   // ============= SLIDERS
   window.scrollBy(0, 1);
