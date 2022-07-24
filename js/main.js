@@ -71,6 +71,14 @@ $( document ).ready(function() {
   $('.slider').slick({
     slidesToShow: 2,
     dots: true,
+    responsive: [
+      {
+          breakpoint: 991,
+          settings: {
+              slidesToShow: 1,
+          }
+      }
+  ]
   });
 
   // slick - help
@@ -101,7 +109,6 @@ $( document ).ready(function() {
   });
   $('.start__slider-7').slick({
     slidesToShow: 1,
-    
   });
   $('.start__slider-8').slick({
     slidesToShow: 1,
