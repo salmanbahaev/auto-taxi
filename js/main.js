@@ -61,12 +61,6 @@ $( document ).ready(function() {
       else $(this).val('');
   });
 
-  // $(function(){
-  //   $('').load(function(){
-      
-  //   }); 
-  // })
-
   // slick slider
   $('.slider').slick({
     slidesToShow: 2,
@@ -158,4 +152,6 @@ $( document ).ready(function() {
       button.hide();
     }
   });
+
+  
 });
