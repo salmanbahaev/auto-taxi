@@ -11,16 +11,20 @@ $( document ).ready(function() {
     var m = parseInt( $("#moneycount").val() );
     $('.how__summ-value').text( RS( t , m ) );
   }
-   var slidermoneyMin = 1820;
-   var slidermoneyMax = 25480;
-   $( "#moneycount" ).val( slidermoneyMin );
-   var slidermoney = $("#slidermoney").slider({
+  var slidermoneyMin = 1820;
+  var slidermoneyMax = 25480;
+  
+ 
+  $( "#moneycount" ).val( 20020 );
+  var slidermoney = $("#slidermoney").slider({
       animate:1000,
       min:slidermoneyMin,
       max:slidermoneyMax,
-      step:1820,   
+      value:20020,
+      step:1820,
       slide:function(event,ui){
           $( "#moneycount" ).val( ui.value );
+          console.log(ui.value);
           $( "#moneycount_label" ).text( ui.value / 1820 );
           RW();
           //itogoProfit();
@@ -40,9 +44,11 @@ $( document ).ready(function() {
       animate:1000,
       min:slidertimeMin,
       max:slidertimeMax,
+      value:1,
       step:1,
       slide:function(event,ui){
           $("#daycount").val(ui.value);
+          console.log(ui.value)
           $("#daycount_label").text(ui.value);
           RW();
           
