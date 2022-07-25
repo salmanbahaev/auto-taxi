@@ -126,6 +126,7 @@ $( document ).ready(function() {
     $('.start__slider-8').slick("refresh");
   })
 
+
   // $('.box-button button').click(function(e){
   // })
 

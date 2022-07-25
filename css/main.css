@@ -1502,7 +1502,6 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 .how__summ-rub {
   text-align: center;
@@ -2309,6 +2308,11 @@ html {
 }
 .map__city img, .map__time img {
   margin-right: 14px;
+}
+@media (max-width: 575.98px) {
+  .map__city img, .map__time img {
+    width: 22px;
+  }
 }
 .map__contacts-phone {
   display: flex;

@@ -1471,7 +1471,7 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    // text-fill-color: transparent;
   }
 
   &__summ-rub {
@@ -2267,6 +2267,10 @@ html {
 
     img {
       margin-right: 14px;
+
+      @media (max-width: 575.98px) {
+        width: 22px;
+      }
     }
   }
 
