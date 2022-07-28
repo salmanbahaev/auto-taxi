@@ -258,3 +258,33 @@
     line-height: 22px;
   }
 }
+@media (max-width: 575.98px) {
+  .fsz-24 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .auto__contacts > a {
+    padding: 5px 20px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  .auto .auto__links a {
+    width: 48px;
+  }
+}
+@media (max-width: 400px) {
+  .auto__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .auto__contacts .auto__links {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 375px) {
+  .auto .slide {
+    max-width: 270px;
+  }
+}

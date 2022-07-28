@@ -298,6 +298,10 @@ html {
   .header__select {
     display: none;
   }
+  .header__select-burger {
+    display: flex;
+    padding: 12px 24px;
+  }
 }
 .header__select .select-enter {
   position: relative;
