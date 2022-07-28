@@ -16,25 +16,6 @@
 
 <body>
   <header class="header">
-    <div class="modal fade" id="city" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="cityLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cityLabel">Выберите город</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <a href="/" class="city" value="Ярославль">Ярославль</a>
-            <a href="/ivanovo.html" class="city" value="Иваново">Иваново</a>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button> 
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -58,13 +39,16 @@
         
             <div class="header__select">
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary select-enter" data-toggle="modal" data-target="#city">
+              <button type="button" class="btn btn-primary select-enter">
                 Выберите город
               </button>
-              <p data-toggle="modal" data-target="#city" class="header__city">Ярославль</p>
-  
-              <!-- Модальное окно -->
+              <p class="header__city">Ярославль</p>
               
+              <!-- Модальное окно -->
+              <div class="header__select-modal transparent">
+                <a href="/" class="city" value="Ярославль">Ярославль</a>
+                <a href="/ivanovo.html" class="city" value="Иваново">Иваново</a>
+              </div>
   
             </div>
         
@@ -88,15 +72,19 @@
                 <li><a class="menu__item" href="#free">Авто бесплатно</a></li>
                 <li><a class="menu__item" href="#rev">Отзывы</a></li>
                 <li><a class="menu__item" href="#map-title">Контакты</a></li>
-                <li class="d-flex border-top mt-2">
+                <li class="d-flex border-top pl-4 pt-3 mt-2">
                   <div class="header__select header__select-burger">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary select-enter" data-toggle="modal" data-target="#city">
+                    <button type="button" class="btn btn-primary select-enter">
                       Выберите город
                     </button>
-                    <p data-toggle="modal" data-target="#city" class="header__city">Иваново</p>
+                    <p class="header__city">Ярославль</p>
         
                     <!-- Модальное окно -->
+                    <div class="header__select-modal transparent">
+                      <a href="/" class="city" value="Ярославль">Ярославль</a>
+                      <a href="/ivanovo.html" class="city" value="Иваново">Иваново</a>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -138,7 +126,7 @@
               <div class="lease__link">
                 <a href="https://vk.com/avirent_ru" target="_blank" class="lease__vk"><img src="img/lease-vk.svg" alt="vkontakte"></a>
                 <a href="https://t.me/+79109705606" class="lease__tg"><img src="img/lease-tg.svg" alt="telegram"></a>
-                <a href="#" class="lease__wa"><img src="img/lease-wa.svg" alt="whatsapp"></a>
+                <a href="https://wa.me/+79109705606" class="lease__wa"><img src="img/lease-wa.svg" alt="whatsapp"></a>
               </div>
             </div>
             <div class="lease__lights"><img src="img/lights.png" alt=""></div>

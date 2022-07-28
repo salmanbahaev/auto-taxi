@@ -160,5 +160,7 @@ $( document ).ready(function() {
     }
   });
 
-  
+  $(".select-enter").click(function() {
+    $(".header__select-modal").toggleClass("transparent");
+  });
 });
