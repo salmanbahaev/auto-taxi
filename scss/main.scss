@@ -219,6 +219,15 @@ html {
       z-index: 555;
     }
 
+    a {
+      width: 133px;
+      height: 22px;
+
+      img {
+        width: 100%;
+      }
+    }
+
     p {
       font-weight: 400;
       font-size: 13.8742px;
@@ -247,6 +256,15 @@ html {
 
   &__mess-icon {
     margin-top: 6px;
+
+    a {
+      width: 42px;
+      height: 31px;
+      
+      img {
+        width: 100%;
+      }
+    }
   }
 
   &__select {
@@ -695,9 +713,15 @@ html {
 
     .lease__vk, .lease__tg, .lease__wa {
       transition: transform .3s ease;
+      width: 53px;
+      height: 38px;
 
       &:hover {
         transform: translateY(-7%);
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
@@ -706,11 +730,18 @@ html {
 .help {
   padding-top: 90px;
 
+  @media (max-width: 575.98px) {
+    padding-top: 60px;
+  }
+
   &__title {
     margin-bottom: 30px;
 
     @media (max-width: 767.98px) {
       margin-bottom: 15px;
+    }
+    @media (max-width: 575.98px) {
+      margin-bottom: 0px;
     }
   }
 
@@ -827,6 +858,10 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 575.98px) {
+      margin-top: 36px;
+    }
   }
 
   &__card-img {
@@ -968,6 +1003,8 @@ html {
 
     img {
       margin-right: 13.5px;
+      width: 19px;
+      height: 25px;
     }
 
     p {
@@ -1373,13 +1410,13 @@ html {
     height: 92px;
 
     &.img-1 {
-      background: url("../img/need-1.png") center no-repeat;
+      background: url("../img/need-1.png") center / 92px 92px no-repeat;
     }
     &.img-2 {
-      background: url("../img/need-2.png") center no-repeat;
+      background: url("../img/need-2.png") center / 92px 92px no-repeat;
     }
     &.img-3 {
-      background: url("../img/need-3.png") center no-repeat;
+      background: url("../img/need-3.png") center / 104px 104px no-repeat;
     }
   }
 
@@ -1790,6 +1827,12 @@ html {
 
   &__list-img {
     margin-right: 14px;
+    width: 26px;
+    height: 21px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__list-text {
@@ -2079,6 +2122,8 @@ html {
 
       img {
         margin-right: 15px;
+        width: 50px;
+        height: 50px;
       }
     }
 
@@ -2240,6 +2285,10 @@ html {
 
   @media (max-width: 575.98px) {
     height: 290px;
+
+    & > div {
+      margin-left: -300px;
+    }
   }
 
   .container {
@@ -2281,6 +2330,11 @@ html {
     align-items: center;
     margin-bottom: 50px;
 
+    img {
+      width: 25px;
+      height: 28px;
+    }
+
     @media (max-width: 991.98px) {
       margin-bottom: 32px;
     }
@@ -2319,11 +2373,18 @@ html {
 
     img {
       margin-right: 14px;
+      width: 26px;
+      height: 26px;
     }
   }
 
   &__contacts-links {
     display: flex;
+
+    img {
+      width: 42px;
+      height: 31px;
+    }
   }
 }
 
@@ -2410,6 +2471,11 @@ html {
         }
       }
     }
+
+    img {
+      width: 133px;
+      height: 22px;
+    }
   }
   &__politic,
   &__studio {
@@ -2427,4 +2493,79 @@ html {
   &__studio {
     opacity: 0.5;
   }
+}
+
+.popup-fade {
+	display: none;
+}
+.popup-fade:before {
+  content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	z-index: 999999;
+	opacity: 0.5;
+}
+.popup {
+  position: fixed;
+	z-index: 999999;
+	opacity: 1;	
+	top: 20%;
+	left: 50%;
+	padding: 20px;
+	width: 360px;
+	margin-left: -200px;	
+	background: #fff;
+	border: 1px solid orange;
+	border-radius: 4px; 
+}
+.popup-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.modal_div {
+  width: 300px;
+  height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%; /* пoлoвинa экрaнa слевa */
+  margin-top: -150px;
+  margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#000; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%;
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
 }

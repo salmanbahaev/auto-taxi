@@ -1,4 +1,36 @@
 $( document ).ready(function() {
+  document.addEventListener ("mouseleave", function (e) {
+    if (e.clientY < 0) {
+      $('.popup-fade').fadeIn(200);
+		  return false;
+    }
+  }, false);
+
+  $('.popup-close').click(function() {
+		$(this).parents('.popup-fade').fadeOut(200);
+		return false;
+	});
+
+  $(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.popup-fade').fadeOut(200);
+		}
+	});
+	
+	$('.popup-fade').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+			$(this).fadeOut(200);					
+		}
+	});
+
+
+
+  
+
+
+
+  
   console.log( "ready!" );
   
 

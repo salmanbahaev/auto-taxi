@@ -280,6 +280,13 @@ html {
     z-index: 555;
   }
 }
+.header__logo a {
+  width: 133px;
+  height: 22px;
+}
+.header__logo a img {
+  width: 100%;
+}
 .header__logo p {
   font-weight: 400;
   font-size: 13.8742px;
@@ -306,6 +313,13 @@ html {
 }
 .header__mess-icon {
   margin-top: 6px;
+}
+.header__mess-icon a {
+  width: 42px;
+  height: 31px;
+}
+.header__mess-icon a img {
+  width: 100%;
 }
 .header__select {
   position: relative;
@@ -743,13 +757,23 @@ html {
 }
 .lease__link .lease__vk, .lease__link .lease__tg, .lease__link .lease__wa {
   transition: transform 0.3s ease;
+  width: 53px;
+  height: 38px;
 }
 .lease__link .lease__vk:hover, .lease__link .lease__tg:hover, .lease__link .lease__wa:hover {
   transform: translateY(-7%);
 }
+.lease__link .lease__vk img, .lease__link .lease__tg img, .lease__link .lease__wa img {
+  width: 100%;
+}
 
 .help {
   padding-top: 90px;
+}
+@media (max-width: 575.98px) {
+  .help {
+    padding-top: 60px;
+  }
 }
 .help__title {
   margin-bottom: 30px;
@@ -757,6 +781,11 @@ html {
 @media (max-width: 767.98px) {
   .help__title {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  .help__title {
+    margin-bottom: 0px;
   }
 }
 .help__mobile {
@@ -866,6 +895,11 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 575.98px) {
+  .help__card {
+    margin-top: 36px;
+  }
 }
 .help__card-img {
   margin: auto;
@@ -992,6 +1026,8 @@ html {
 }
 .start__card-info-1 img, .start__card-info-2 img, .start__card-info-3 img {
   margin-right: 13.5px;
+  width: 19px;
+  height: 25px;
 }
 .start__card-info-1 p, .start__card-info-2 p, .start__card-info-3 p {
   font-size: 18px;
@@ -1389,13 +1425,13 @@ html {
   height: 92px;
 }
 .need__card-img.img-1 {
-  background: url("../img/need-1.png") center no-repeat;
+  background: url("../img/need-1.png") center/92px 92px no-repeat;
 }
 .need__card-img.img-2 {
-  background: url("../img/need-2.png") center no-repeat;
+  background: url("../img/need-2.png") center/92px 92px no-repeat;
 }
 .need__card-img.img-3 {
-  background: url("../img/need-3.png") center no-repeat;
+  background: url("../img/need-3.png") center/104px 104px no-repeat;
 }
 .need__title {
   margin-top: 27px;
@@ -1805,6 +1841,11 @@ html {
 }
 .free__list-img {
   margin-right: 14px;
+  width: 26px;
+  height: 21px;
+}
+.free__list-img img {
+  width: 100%;
 }
 .free__list-text {
   font-size: 18px;
@@ -2098,6 +2139,8 @@ html {
 }
 .rev .slider__name img {
   margin-right: 15px;
+  width: 50px;
+  height: 50px;
 }
 .rev .slider__address {
   font-size: 18px;
@@ -2270,6 +2313,9 @@ html {
   .map {
     height: 290px;
   }
+  .map > div {
+    margin-left: -300px;
+  }
 }
 .map .container {
   position: absolute;
@@ -2314,6 +2360,10 @@ html {
   align-items: center;
   margin-bottom: 50px;
 }
+.map__city img, .map__time img {
+  width: 25px;
+  height: 28px;
+}
 @media (max-width: 991.98px) {
   .map__city, .map__time {
     margin-bottom: 32px;
@@ -2351,9 +2401,15 @@ html {
 }
 .map__contacts-phone img {
   margin-right: 14px;
+  width: 26px;
+  height: 26px;
 }
 .map__contacts-links {
   display: flex;
+}
+.map__contacts-links img {
+  width: 42px;
+  height: 31px;
 }
 
 .map-mobile {
@@ -2441,6 +2497,10 @@ html {
     display: none;
   }
 }
+.footer__logo img {
+  width: 133px;
+  height: 22px;
+}
 @media (max-width: 1199.98px) {
   .footer__politic, .footer__studio {
     margin-top: 30px;
@@ -2454,4 +2514,84 @@ html {
 }
 .footer__studio {
   opacity: 0.5;
+}
+
+.popup-fade {
+  display: none;
+}
+
+.popup-fade:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  opacity: 0.5;
+}
+
+.popup {
+  position: fixed;
+  z-index: 999999;
+  opacity: 1;
+  top: 20%;
+  left: 50%;
+  padding: 20px;
+  width: 360px;
+  margin-left: -200px;
+  background: #fff;
+  border: 1px solid orange;
+  border-radius: 4px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal_div {
+  width: 300px;
+  height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%; /* пoлoвинa экрaнa слевa */
+  margin-top: -150px;
+  margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Пoдлoжкa */
+#overlay {
+  z-index: 3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position: fixed; /* всегдa перекрывaет весь сaйт */
+  background-color: #000; /* чернaя */
+  opacity: 0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity: 0.8; /* фикс прозрачности для старых браузеров */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%; /* рaзмерoм вo весь экрaн */
+  top: 0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left: 0;
+  cursor: pointer;
+  display: none; /* в oбычнoм сoстoянии её нет) */
 }
