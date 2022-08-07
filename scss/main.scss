@@ -101,8 +101,8 @@ html {
 
   .header__select-modal {
     position: absolute;
-    top: 27px;
-    left: -20;
+    top: 28px;
+    left: -11px;
     width: 150px;
     display: flex;
     flex-direction: column;
@@ -986,7 +986,8 @@ html {
       left: 0;
       top: 0;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -1027,8 +1028,8 @@ html {
 
     p {
       margin-bottom: 10px;
-      font-size: 18px;
-      line-height: 25px;
+      font-size: 21px;
+      line-height: 29px;
     }
 
     a {
@@ -2513,59 +2514,245 @@ html {
   position: fixed;
 	z-index: 999999;
 	opacity: 1;	
-	top: 20%;
+	top: 50%;
 	left: 50%;
-	padding: 20px;
+	padding: 30px 20px;
 	width: 360px;
-	margin-left: -200px;	
+  transform: translate(-50%, -50%);
 	background: #fff;
 	border: 1px solid orange;
 	border-radius: 4px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 575.98px) {
+    padding: 18px;
+  }
 }
 .popup-close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 30px;
+	right: 30px;
+  width: 30px;
+  height: 30px;
+
+  @media (max-width: 575.98px) {
+    width: 20px;
+    top: 18px;
+    right: 18px;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
-.modal_div {
-  width: 300px;
-  height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
-  border-radius: 5px;
-  border: 3px #000 solid;
-  background: #fff;
-  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
-  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
-  left: 50%; /* пoлoвинa экрaнa слевa */
-  margin-top: -150px;
-  margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
-  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
-  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
-  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
-  padding: 20px 10px;
-}
-/* Кнoпкa зaкрыть для тех ктo в тaнке) */
-.modal_close {
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  display: block;
-}
-/* Пoдлoжкa */
-#overlay {
-  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
-  position:fixed; /* всегдa перекрывaет весь сaйт */
-  background-color:#000; /* чернaя */
-  opacity:0.8; /* нo немнoгo прoзрaчнa */
-  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
-  filter:alpha(opacity=80);
-  width:100%;
-  height:100%; /* рaзмерoм вo весь экрaн */
-  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
-  left:0;
-  cursor:pointer;
-  display:none; /* в oбычнoм сoстoянии её нет) */
+.popup-fade {
+  
+  .popup {
+    max-width: 934px;
+    width: 100%;
+    overflow: hidden;
+
+    @media (max-width: 991.98px) {
+      max-width: 650px;
+    }
+    @media (max-width: 767.98px) {
+      max-width: 540px;
+    }
+    @media (max-width: 575.98px) {
+      max-width: 260px;
+    }
+
+    .popup-dollar,
+    .popup-rub {
+      position: absolute;
+      width: 360px;
+      height: auto;
+      top: 63%;
+      z-index: -1;
+
+      @media (max-width: 991.98px) {
+        width: 300px;
+      }
+      @media (max-width: 575.98px) {
+        top: 50%;
+      }
+      
+    }
+    .popup-dollar {
+      top: 44%;
+      right: -25%;
+      width: 420px;
+      transform: rotate(25deg);
+
+      @media (max-width: 991.98px) {
+        top: 35%;
+        right: -30%;
+        width: 340px;
+      }
+      @media (max-width: 767.98px) {
+        top: 28%;
+        right: -37%;
+      }
+      @media (max-width: 575.98px) {
+        top: 27%;
+        right: -40%;
+        width: 175px;
+      }
+    }
+    .popup-rub {
+      left: -20%;
+      transform: translateY(-50%);
+
+      @media (max-width: 991.98px) {  
+        width: 300px;
+        left: -24%;
+      }
+      @media (max-width: 767.98px) {
+        width: 300px;
+        left: -32%;
+      }
+      @media (max-width: 575.98px) {
+        width: 170px;
+        left: -38%;
+      }
+    }
+  }
+
+  .stop {
+    display: inline-block;
+    border: 1px solid #FCB346;
+    border-radius: 35px;
+    padding: 10px 30px;
+
+    @media (max-width: 991.98px) {
+      padding: 5px 20px;
+    }
+    @media (max-width: 575.98px) {
+      padding: 10px 20px;
+    }
+
+    p {
+      font-size: 31px;
+      line-height: 48px;
+
+      @media (max-width: 575.98px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+  .popup-free {
+    font-size: 60px;
+    line-height: 82px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: 991.98px) {
+      font-size: 40px;
+      line-height: 56px;
+      margin-top: 20px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 30px;
+      line-height: 43px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 575.98px) {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    span {
+      color: rgba(252, 179, 70, 1);
+      font-weight: 700;
+    }
+  }
+  .popup-bottom {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    @media (max-width: 991.98px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    @media (max-width: 575.98px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .popup-footer {
+    margin-top: 30px;
+    display: flex;
+
+    @media (max-width: 991.98px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+    }
+
+    & > a {
+      display: flex;
+      padding: 7.5px 22px;
+      border-radius: 90px;
+      letter-spacing: 0.05em;
+      border: 1px solid #FCB346;
+      color: #000;
+      transition: color 0.3s ease;
+      font-size: 18.2213px;
+      line-height: 25px;
+      transition: transform 0.3s ease;
+
+      @media (max-width: 575.98px) {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 5px 20px;
+      }
+
+      &:hover {
+        color: #FCB346;
+      }
+    }
+  }
+  .popup-links {  
+    display: flex; 
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 4px;
+
+    @media (max-width: 575.98px) {
+      margin-left: 0;
+      margin-top: 18px;
+    }
+
+    a {
+      display: flex;
+      width: 52px;
+      transition: transform 0.3s ease;
+
+      @media (max-width: 575.98px) {
+        width: 40px;
+      }
+
+      &:hover {
+        transform: translateY(-7%);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
