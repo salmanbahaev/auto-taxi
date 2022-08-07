@@ -318,6 +318,10 @@ p {
 .auto .auto__links a {
   width: 55px;
   height: auto;
+  transition: transform 0.3s ease;
+}
+.auto .auto__links a:hover {
+  transform: translateY(-7px);
 }
 .auto .auto__links a img {
   width: 100%;

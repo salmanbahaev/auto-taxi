@@ -230,6 +230,11 @@
     a {
       width: 55px;
       height: auto;
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: translateY(-7px);
+      }
 
       img {
         width: 100%;
