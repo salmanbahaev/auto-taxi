@@ -192,7 +192,7 @@ $( document ).ready(function() {
     }
   });
 
-  $(".select-enter").click(function() {
-    $(".header__select-modal").toggleClass("transparent");
+  $(".select-enter, .header__city").click(function() {
+    $(".header__select-modal").fadeToggle();
   });
 });
